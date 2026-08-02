@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>A Piece of Our Friendship</title>
+<meta name="description" content="A heartfelt Friendship Day keepsake — share your memories and words." />
+<meta name="theme-color" content="#0a0908" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <main class="app">
+
+    <section id="screen-landing" class="screen" aria-label="Welcome">
+      <div class="landing-inner">
+        <div class="landing-mark" aria-hidden="true">💛</div>
+        <h1 class="landing-title">A Piece of Our Friendship</h1>
+        <p class="landing-subtitle">
+          If you're here, you mean something to me. Thank you for being part of my journey.
+          Your words will become memories I'll treasure forever.
+        </p>
+
+        <svg class="thread-divider" viewBox="0 0 120 14" aria-hidden="true">
+          <path d="M2 7 Q 30 -2, 60 7 T 118 7" stroke="url(#threadGrad)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <circle cx="2" cy="7" r="2.5" fill="#f4d160"/>
+          <circle cx="118" cy="7" r="2.5" fill="#f4d160"/>
+          <defs>
+            <linearGradient id="threadGrad" x1="0" y1="0" x2="120" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#8a6d3b"/>
+              <stop offset="0.5" stop-color="#f4d160"/>
+              <stop offset="1" stop-color="#8a6d3b"/>
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <button type="button" id="btn-start" class="btn-start">Start</button>
+        <p class="landing-hint">Takes about 5 minutes · your words are just for me</p>
+      </div>
+    </section>
+
+    <section id="screen-quiz" class="screen" aria-label="Questions" hidden>
+      <div class="quiz-inner">
+
+        <div class="thread-progress">
+          <div class="thread-progress-track" role="progressbar" id="progress-bar"
+               aria-valuemin="1" aria-valuemax="20" aria-valuenow="1" aria-label="Question progress">
+            <div class="thread-progress-fill" id="progress-fill"></div>
+            <div class="thread-progress-bead" id="progress-bead"></div>
+          </div>
+          <div class="thread-progress-meta">
+            <span>Your piece of the thread</span>
+            <span><span class="thread-progress-count" id="progress-count">1</span> / 20</span>
+          </div>
+        </div>
+
+        <form id="question-form" novalidate>
+          <div class="question-card" id="question-card">
+            <span class="question-eyebrow" id="question-eyebrow">Question 1</span>
+            <label class="question-text" id="question-label" for="question-field"></label>
+            <div id="input-wrapper"></div>
+            <p class="question-error" id="question-error" role="alert" aria-live="polite"></p>
+          </div>
+
+          <div class="quiz-nav" style="margin-top: 20px;">
+            <button type="button" id="btn-prev" class="btn btn-secondary">Back</button>
+            <button type="submit" id="btn-next" class="btn btn-primary">Next</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="screen-loading" class="screen" aria-label="Submitting" hidden>
+      <div class="loading-inner">
+        <div class="thread-spinner" role="status" aria-label="Submitting your answers"></div>
+        <p class="loading-text">Weaving your words into the thread…</p>
+        <p class="submit-error visually-hidden" id="submit-error" role="alert"></p>
+      </div>
+    </section>
+
+    <section id="screen-thankyou" class="screen" aria-label="Thank you" hidden>
+      <div class="thankyou-inner">
+        <div class="thankyou-mark" aria-hidden="true">💛</div>
+        <h2 class="thankyou-title">Thank you for giving me a piece of your heart.</h2>
+        <p class="thankyou-message">I'll treasure your words forever. 💛</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
