@@ -11,4 +11,12 @@ const QUESTIONS = [
   { id: 'funniestMemory', label: 'What\u2019s the funniest memory we share?', type: 'textarea', placeholder: 'The one that still makes you laugh…' },
   { id: 'songReminder', label: 'Which song reminds you of me, and why?', type: 'text', placeholder: 'Song title — and the reason' },
   { id: 'movieTitle', label: 'If our friendship were a movie, what would its title be?', type: 'text', placeholder: 'Give it a title…' },
-  { id: 'questionToAsk', label: 'What\u2019s one question you\u2019ve always wanted to ask me?', type: 't
+  { id: 'questionToAsk', label: 'What\u2019s one question you\u2019ve always wanted to ask me?', type: 'textarea', placeholder: 'Now\u2019s your chance…' },
+  { id: 'changeOneThing', label: 'If you could change one thing about our friendship, what would it be?', type: 'textarea', placeholder: 'Honesty makes it stronger…' },
+  { id: 'fiveYears', label: 'Where do you think I\u2019ll be in five years?', type: 'textarea', placeholder: 'Paint the picture…' },
+  { id: 'alwaysWantedToTell', label: 'What\u2019s something you\u2019ve always wanted to tell me?', type: 'textarea', placeholder: 'Say it here…' },
+  { id: 'advice', label: 'What\u2019s one piece of advice you\u2019d give me?', type: 'textarea', placeholder: 'What do you want me to know?' },
+  { id: 'neverChange', label: 'What\u2019s one thing you hope I never change?', type: 'text', placeholder: 'The thing that makes me, me…' },
+  { id: 'memoryToKeep', label: 'What\u2019s one memory of me you\u2019ll always keep?', type: 'textarea', placeholder: 'The one you\u2019ll carry forward…' },
+  { id: 'heartfeltMessage', label: 'Leave me a heartfelt message that I\u2019ll remember for years.', type: 'textarea', placeholder: 'This is the one I\u2019ll read again and again…' },
+];
