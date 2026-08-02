@@ -1,0 +1,50 @@
+/* Admin-only styling, layered on top of style.css */
+
+.admin-body { min-height: 100vh; }
+
+.admin-app {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+.admin-screen[hidden] { display: none !important; }
+
+.admin-screen {
+  padding: 32px 20px 60px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+#admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--bg-raised);
+  border: 1px solid rgba(201, 164, 76, 0.14);
+  border-radius: var(--radius);
+  padding: 36px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 24px;
+  margin: 6px 0 4px;
+  color: var(--text);
+}
+
+.admin-subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: 0 0
