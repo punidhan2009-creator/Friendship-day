@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Admin · A Piece of Our Friendship</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="admin-style.css" />
+</head>
+<body class="admin-body">
+
+  <main class="admin-app">
+
+    <section id="admin-login" class="admin-screen">
+      <div class="admin-login-card">
+        <div class="landing-mark" aria-hidden="true">💛</div>
+        <h1 class="admin-title">Owner Sign In</h1>
+        <p class="admin-subtitle">Only you should have this link. Sign in to read your friends' answers.</p>
+
+        <form id="login-form" class="admin-login-form" novalidate>
+          <label class="admin-label" for="login-email">Email</label>
+          <input class="question-input" id="login-email" type="email" autocomplete="email" required />
+
+          <label class="admin-label" for="login-password">Password</label>
+          <input class="question-input" id="login-password" type="password" autocomplete="current-password" required />
+
+          <p class="question-error" id="login-error" role="alert" aria-live="polite"></p>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">Sign In</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="admin-dashboard" class="admin-screen" hidden>
+      <header class="admin-header">
+        <div>
+          <h1 class="admin-title" style="margin-bottom:4px;">Friendship Day Responses</h1>
+          <p class="admin-subtitle" id="admin-summary">Loading…</p>
+        </div>
+        <div class="admin-header-actions">
+          <input type="search" id="admin-search" class="question-input admin-search" placeholder="Search by name…" />
+          <button type="button" id="btn-logout" class="btn btn-secondary">Sign Out</button>
+        </div>
+      </header>
+
+      <div id="admin-list" class="admin-list" aria-live="polite"></div>
+      <p id="admin-empty" class="admin-subtitle" hidden>No responses yet — check back after Friendship Day!</p>
+    </section>
+
+  </main>
+
+  <template id="response-card-template">
+    <article class="response-card">
+      <button type="button" class="response-card-header">
+        <div>
+          <span class="response-name"></span>
+          <span class="response-date"></span>
+        </div>
+        <span class="response-toggle" aria-hidden="true">＋</span>
+      </button>
+      <div class="response-body"></div>
+    </article>
+  </template>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="questions.js"></script>
+  <script src="admin.js"></script>
+</body>
+        </html>
